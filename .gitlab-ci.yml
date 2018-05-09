@@ -4,18 +4,22 @@ stages:
   - build
   - deploy
 
-build_theme:
+# Build the hugo theme and generate the static site
+build_static:
   stage: build
-  image: node:latest
+  artifacts:
+    name: "build_static_${CI_BUILD_REF}"
+    expire_in: 1d
+    paths:
+      - public
+  image: monachus/hugo
   script:
+    - curl -sL https://deb.nodesource.com/setup_8.x | bash -
+    - apt-get install -y nodejs build-essential
     - cd ./themes/andrewpwarren/src
     - npm install
     - npm run build:production
-
-build_static:
-  stage: build
-  script:
-    - sudo apt-get install hugo
+    - cd ../../../
     - hugo
 
 # Deploy to Production(S3)
@@ -24,11 +28,8 @@ deploy_prod:
   image: node:latest
   only:
     - master
-  artifacts:
-    name: "build_${CI_BUILD_REF}"
-    expire_in: 1d
-    paths:
-      - public
+  dependencies: 
+    - build_static
   script:
-    - npm install s3-deploy
-    - s3-deploy './public/**' --cwd './' --region ${AWS_REGION} --bucket ${AWS_S3_BUCKET_NAME} --distId CF_DIST_ID --invalidate 
+    - npm install -g s3-deploy
+    - s3-deploy './public/**' --cwd './public/' --region ${AWS_REGION} --bucket ${AWS_S3_BUCKET_NAME} --invalidate 
