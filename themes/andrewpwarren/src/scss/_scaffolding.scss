@@ -9,3 +9,9 @@
 .page-margin {
 	margin-top: 80px;
 }
+
+@include media-breakpoint-down(sm) {
+	.page-margin {
+		margin-top: 50px;
+	}
+}
