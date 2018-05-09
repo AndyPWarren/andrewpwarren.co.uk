@@ -1,17 +1,28 @@
 <footer>
-	<ul class="list-inline">
-		<li class="list-inline-item text-uppercase">
-			<a href="{{ .Site.BaseURL }}">
-				&copy; {{ now.Format "2006" }} {{ .Site.Title }}
-			</a>
-		</li>
-		{{ range .Site.Params.Contacts }}
-		<li class="list-inline-item">
-			<a href="{{ .link }}" data-toggle="tooltip" title="{{ .text }}" target="_blank">
-				<i class="icons icon-{{ .icon }}"></i>
-				<span class="sr-only">{{ .icon }}</span>
-			</a>
-		</li>
-		{{ end }}
-	</ul>
+	<div class="container">
+		<div class="row justify-content-center">
+			<div class="col-sm-12">
+				<ul class="list-inline">
+					<li class="list-inline-item d-none d-sm-inline-block">
+						<a href="{{ .Site.BaseURL }}">
+							&copy; {{ now.Format "2006" }} {{ .Site.Title }}
+						</a>
+					</li>
+					{{ with .Site.Params.Contacts }} {{ range . }}
+					<li class="list-inline-item">
+						<a href="{{ .link }}" data-toggle="tooltip" title="{{ .text }}" target="_blank">
+							<i class="icons icon-{{ .icon }}"></i>
+							<span class="sr-only">{{ .icon }}</span>
+						</a>
+					</li>
+					{{ end }} {{ end }}
+				</ul>
+			</div>
+			<div class="col-12 d-block d-sm-none text-uppercase">
+					<a href="{{ .Site.BaseURL }}">
+						&copy; {{ now.Format "2006" }} {{ .Site.Title }}
+					</a>
+				</div>
+		</div>
+	</div>
 </footer>
