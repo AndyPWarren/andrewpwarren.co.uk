@@ -40,7 +40,6 @@ function run() {
   applyText(range.text);
   applyStyle(range.cssClass);
   setHeaderText(cookieModule.readVisitedCookie())
-  console.log($('#strings').text());
   var typed = new Typed('.typed', {
     stringsElement: '#strings',
     typeSpeed: 30,
@@ -50,7 +49,6 @@ function run() {
       $('.header').removeClass('hidden');
     },
     onStringTyped: () => {
-      console.log('string typed');
       $('.reveal').addClass('show');
       if (!cookieModule.readVisitedCookie()) {
         cookieModule.setVisitedCookie();
