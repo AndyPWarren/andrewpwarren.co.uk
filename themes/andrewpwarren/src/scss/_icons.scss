@@ -42,10 +42,6 @@
   }
 }
 
-.glyphicon {
-  line-height: $line-height-base;
-}
-
 .icon-earth:before           {content: "\e900";}
 .icon-linkedin:before        {content: "\e901";}
 .icon-location:before        {content: "\e902";}
@@ -54,28 +50,3 @@
 .icon-cv:before              {content: "\e905";}
 .icon-github:before          {content: "\e906";}
 .icon-gitlab:before          {content: "\e907";}
-
-.material-icons {
-  font-family: 'Material Icons';
-  font-weight: bold;
-  font-style: normal;
-  font-size: 24px;  /* Preferred icon size */
-  display: inline-block;
-  line-height: 1rem;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-
-  /* Support for IE. */
-  font-feature-settings: 'liga';
-}

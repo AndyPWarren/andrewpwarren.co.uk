@@ -84,8 +84,9 @@ $badge-padding-x:                   1em;
 
 //== Iconography
 //
-//## Specify custom location and filename of the included Glyphicons icon font. Useful for those including Bootstrap via Bower.
+//
 $icon-size:                 $font-size-large;
+$fa-font-path:							'/fonts/fa/';
 
 //== Time of days vars
 //

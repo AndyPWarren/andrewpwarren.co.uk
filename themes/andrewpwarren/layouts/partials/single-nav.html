@@ -11,7 +11,7 @@
             {{ if .Prev }}
             <li class="nav-item previous">
               <a href="{{ .Prev.URL }}" data-toggle="tooltip" title="previous project" class="nav-link">
-                <span class="d-block d-md-none material-icons">navigate_before</span>
+                <span class="d-block d-md-none"><i class="fas fa-chevron-left"></i></span>
                 <span class="d-none d-md-block">Previous</span>
               </a>
             </li>
@@ -28,7 +28,7 @@
             {{ if .Next }}
             <li class="nav-item next">
               <a href="{{ .Next.URL }}" data-toggle="tooltip" title="next project" class="nav-link">
-                <span class="d-block d-md-none material-icons">navigate_next</span>
+                <span class="d-block d-md-none"><i class="fas fa-chevron-right"></i></span>
                 <span class="d-none d-md-block">Next</span>
               </a>
             </li>
