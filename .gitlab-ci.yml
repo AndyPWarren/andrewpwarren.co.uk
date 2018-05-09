@@ -32,4 +32,4 @@ deploy_prod:
     - build_static
   script:
     - npm install -g s3-deploy
-    - s3-deploy './public/**' --cwd './public/' --region ${AWS_REGION} --bucket ${AWS_S3_BUCKET_NAME} --invalidate 
+    - s3-deploy './public/**' --cwd './public/' --region ${AWS_REGION} --bucket ${AWS_S3_BUCKET_NAME} --invalidate --deleteRemoved
