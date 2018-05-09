@@ -1,0 +1,28 @@
+.project-page {
+  section {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  .hero {
+    margin-top: 40px;
+    text-align: center;
+  }
+
+  .btn {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .project-img {
+    width: 100%;
+    max-width: 600px;
+    margin: auto;
+    display: block;
+    margin-top: 1.375rem;
+  }
+
+  .info {
+    background-color: $secondary;
+  }
+}

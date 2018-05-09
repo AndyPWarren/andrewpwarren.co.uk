@@ -1,0 +1,28 @@
+<div class="background mx-auto" style="background-image: url('{{ .Site.Params.hero_image }}');">
+	<img class="sr-only" src="{{ .Site.Params.hero_image }}" alt="background">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 offset-md-1 page-margin">
+				{{ if eq .Page.Kind "404" }}
+				<h1 class="text">
+					Sorry that page doesn't exist, try the <a href="{{ .Site.BaseURL }}">homepage</a>
+				</h1>
+				{{ else }}
+				<span id="strings">
+					<span id="previous-visitor">Welcome back</span>
+					<span id="first-time-visitor">Good
+						<span class="highlight"></span>
+					</span>
+				</span>
+				<span class="h1 typed"></span>
+				<div class="reveal">
+					<h2>{{ .Site.Params.description }}</h2>
+					<div class="text">
+						{{ .Content }}
+					</div>
+				</div>
+				{{ end }}
+			</div>
+		</div>
+	</div>
+</div>

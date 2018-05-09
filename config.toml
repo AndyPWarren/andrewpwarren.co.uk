@@ -1,0 +1,33 @@
+baseURL = "http://andrewpwarren.co.uk/"
+languageCode = "en-uk"
+title = "Andy Warren"
+theme = "andrewpwarren"
+googleAnalytics = "UA-91628404-1"
+
+[params]
+  description = "I'm a Web Developer and Technologist"
+  profile = "img/profile.jpg"
+  hero_image = "img/landscape4a-cropped.jpg"
+  contacts = [
+  { 
+    text = "Talk to me",
+    link = "mailto:mail@andrewpwarren.co.uk",
+    icon = "email"
+  },
+  {
+    text =  "Connect with me",
+    link =  "https//www.linkedin.com/in/andrewpwarren",
+    icon =  "linkedin"
+  },
+  {    
+    text =  "Check out my cv",
+    link =  "./docs/Andrew-Warren-CV.pdf",
+    icon =  "cv"
+  },
+  {
+    text =  "See what I've been up to on github",
+    link =  "https//github.com/AndyPWarren",
+    icon =  "github"
+  }]
+  
+    

@@ -1,0 +1,12 @@
+.background {
+  height: 480px;
+  background-repeat: no-repeat;
+  background-position: left top;
+}
+
+@include media-breakpoint-up(md) { 
+  .background {
+    background-position: right top;
+    background-size: cover;
+  }
+}

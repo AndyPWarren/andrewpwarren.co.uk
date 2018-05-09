@@ -1,0 +1,42 @@
+{{ define "main" }} 
+{{ partial "single-nav.html" . }}
+<div class="project-page">
+	<div class="container">
+		<section class="row align-items-center hero">
+			<div class="col-md-5 offset-md-1">
+				<span id="strings">
+					<span>{{ .Title }}</span>
+				</span>
+				<span class="h1 typed"></span>
+				<div class="reveal">
+					<h3>{{ .Description }}</h3>
+					{{ if .Params.link }}
+					<a class="cta-primary" href="{{ .Params.link }}" target="_blank">
+						<strong>Check it out</strong>
+					</a>
+					{{ end }}
+				</div>
+			</div>
+			<div class="col-md-5">
+				{{ if .Params.image }}
+				<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}"> {{ end }}
+			</div>
+	</div>
+	</section>
+	<section class="info reveal">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-10 offset-md-1">
+					{{ .Content }} {{ with .Params.tags }}
+					<ul class="list-inline">
+						{{ range .}}
+						<li class="badge badge-primary">{{ . }}</li>
+						{{ end }}
+					</ul>
+					{{ end }}
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+{{ end }}

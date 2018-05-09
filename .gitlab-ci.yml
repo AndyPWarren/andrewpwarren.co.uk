@@ -1,0 +1,34 @@
+# CI Config
+
+stages:
+  - build
+  - deploy
+
+build_theme:
+  stage: build
+  image: node:latest
+  script:
+    - cd ./themes/andrewpwarren/src
+    - npm install
+    - npm run build:production
+
+build_static:
+  stage: build
+  script:
+    - sudo apt-get install hugo
+    - hugo
+
+# Deploy to Production(S3)
+deploy_prod:
+  stage: deploy
+  image: node:latest
+  only:
+    - master
+  artifacts:
+    name: "build_${CI_BUILD_REF}"
+    expire_in: 1d
+    paths:
+      - public
+  script:
+    - npm install s3-deploy
+    - s3-deploy './public/**' --cwd './' --region ${AWS_REGION} --bucket ${AWS_S3_BUCKET_NAME} --distId CF_DIST_ID --invalidate 

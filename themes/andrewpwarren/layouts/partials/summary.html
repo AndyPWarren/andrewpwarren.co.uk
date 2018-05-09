@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 offset-md-3 project">
+      <h1 class="title">{{ .Title }}</h1>
+      {{ with .Params.company }}
+      <h4>{{ . }}</h4>
+      {{ end }} {{ if .Params.start}}
+      <p>{{ dateFormat "Jan 2006" .Params.start }}{{ if .Params.end }} - {{ dateFormat "Jan 2006" .Params.end }}{{ end }}</p>
+      {{ end }}
+      <p>{{ .Description }}</p>
+      <a href="{{ .URL }}" class="cta-primary">
+        <strong>Read more</strong>
+      </a>
+    </div>
+  </div>
+</div>

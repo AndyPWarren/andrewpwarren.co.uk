@@ -1,0 +1,41 @@
+{{ $page := . }}
+{{ $pages := where .Site.RegularPages "Section" "==" "projects" }}
+{{ $total := len $pages }}
+<div class="border-bottom fixed-top bg-primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <nav class="navbar navbar-expand navbar-dark">
+          <a class="navbar-brand text-uppercase" href="/">{{ .Site.Title }}</a>
+          <ul class="navbar-nav">
+            {{ if .Prev }}
+            <li class="nav-item previous">
+              <a href="{{ .Prev.URL }}" data-toggle="tooltip" title="previous project" class="nav-link">
+                <span class="d-block d-md-none material-icons">navigate_before</span>
+                <span class="d-none d-md-block">Previous</span>
+              </a>
+            </li>
+            {{ end }}
+            <li class="nav-item counter">
+              <span>
+                {{ range $index, $_ := $pages }}
+                {{ if eq .Title $page.Title }}
+                {{ add $index 1 }}
+                {{ end }}
+                {{ end }}
+                 / {{ $total }}</span>
+            </li>
+            {{ if .Next }}
+            <li class="nav-item next">
+              <a href="{{ .Next.URL }}" data-toggle="tooltip" title="next project" class="nav-link">
+                <span class="d-block d-md-none material-icons">navigate_next</span>
+                <span class="d-none d-md-block">Next</span>
+              </a>
+            </li>
+            {{ end }}
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</div>

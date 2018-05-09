@@ -1,0 +1,30 @@
+.navbar-dark {
+	margin-left: -$navbar-link-padding;
+
+	.counter {
+		padding: $navbar-link-padding;
+		line-height: 1rem;
+	  color: $primary;
+	  background-color: $white;
+	}
+
+  .navbar-brand {
+	  padding-left: 0px;
+		margin-left: 0!important;
+		color: $white;
+	}
+
+	.nav-link, .navbar-brand {
+		padding: $navbar-link-padding;
+		line-height: 1rem;
+		@include hover {
+			color: $primary;
+			background-color: $white;
+			border-color: $white;
+		}
+
+		&.active {
+			background-color: $white;
+		}
+ 	}
+}

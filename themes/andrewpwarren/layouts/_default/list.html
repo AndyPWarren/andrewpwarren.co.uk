@@ -1,0 +1,10 @@
+{{ define "main" }}
+{{ partial "list-nav.html" . }}
+{{ partial "site-hero.html" . }}
+{{ partial "profile.html" . }}
+<div class="projects" id="projects">
+	{{ range .Data.Pages.ByWeight }}
+	{{- partial "summary.html" . -}}
+	{{end}}
+</div>
+{{ end }}

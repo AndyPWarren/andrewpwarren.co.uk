@@ -1,0 +1,21 @@
+footer {
+  text-align: center;
+
+  .list-inline {
+    margin-bottom: 0;
+  }
+
+  a {
+    display: block;
+    padding: 10px;
+    transition: background-color 0.3s;
+
+    &:hover {
+      background-color: $white;
+
+      .icons {
+          color: $primary;
+      }
+    }
+  }
+}

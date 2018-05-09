@@ -1,0 +1,8 @@
+//
+// Time of day specific mixins
+// --------------------------------------------------
+@mixin build-tod-classes($tod){
+  .highlight {
+    color: $tod;
+  }
+}

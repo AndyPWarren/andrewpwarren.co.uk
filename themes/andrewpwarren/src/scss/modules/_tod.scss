@@ -1,0 +1,9 @@
+.morning {
+  @include build-tod-classes($morning);
+}
+.afternoon {
+  @include build-tod-classes($afternoon);
+}
+.evening {
+  @include build-tod-classes($evening);
+}
