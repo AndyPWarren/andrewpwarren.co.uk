@@ -4,6 +4,11 @@ title = "Andy Warren"
 theme = "andrewpwarren"
 googleAnalytics = "UA-91628404-1"
 
+[taxonomies]
+  tag = ""
+  group = ""
+  category = ""
+
 [params]
   description = "I'm a Web Developer and Technologist"
   profile = "img/profile.jpg"
