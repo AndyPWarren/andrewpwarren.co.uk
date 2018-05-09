@@ -21,17 +21,12 @@ googleAnalytics = "UA-91628404-1"
   },
   {
     text =  "Connect with me",
-    link =  "https//www.linkedin.com/in/andrewpwarren",
+    link =  "https://www.linkedin.com/in/andrewpwarren",
     icon =  "linkedin"
-  },
-  {    
-    text =  "Check out my cv",
-    link =  "./docs/Andrew-Warren-CV.pdf",
-    icon =  "cv"
   },
   {
     text =  "See what I've been up to on github",
-    link =  "https//github.com/AndyPWarren",
+    link =  "https://github.com/AndyPWarren",
     icon =  "github"
   }]
   
