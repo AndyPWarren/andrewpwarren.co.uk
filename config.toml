@@ -11,8 +11,8 @@ googleAnalytics = "UA-91628404-1"
 
 [params]
   description = "I'm a Web Developer and Technologist"
-  profile = "img/profile.jpg"
-  hero_image = "img/landscape4a-cropped.jpg"
+  profile = "/img/profile.jpg"
+  hero_image = "/img/landscape4a-cropped.jpg"
   contacts = [
   { 
     text = "Talk to me",
