@@ -6,6 +6,8 @@ stages:
 
 # Build the hugo theme and generate the static site
 build_static:
+  variables:
+    HUGO_ENV: "production"
   stage: build
   artifacts:
     name: "build_static_${CI_BUILD_REF}"
