@@ -19,15 +19,17 @@
 	<section class="info reveal">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 offset-md-1 content">
+				<div class="col-md-10 offset-md-1">
 					{{ with .Params.tags }}
 					<ul class="list-inline">
 						{{ range .}}
-						<li class="badge badge-primary">{{ . }}</li>
+						<li class="badge badge-primary no-padding"><a class="tag-cta" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower  }}">{{ . }}</a></li>
 						{{ end }}
 					</ul>
 					{{ end }}
-					{{ .Content }} 
+					<article class="content">
+						{{ .Content }}
+					</article>
 				</div>
 			</div>
 		</div>

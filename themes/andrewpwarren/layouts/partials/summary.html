@@ -9,7 +9,7 @@
       {{ end }}
       <p>{{ .Description }}</p>
       <a href="{{ .URL }}" class="cta-secondary">
-        <i class="fas fa-arrow-right"></i> <strong>Read more</strong>
+        <i class="fas fa-arrow-right"></i> <strong>{{ if eq .Kind "taxonomy" }}View projects{{ else }}Read more{{ end }}</strong>
       </a>
     </div>
   </div>

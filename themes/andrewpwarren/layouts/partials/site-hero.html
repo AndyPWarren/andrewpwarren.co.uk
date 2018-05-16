@@ -7,7 +7,8 @@
 				<h1 class="text">
 					Sorry that page doesn't exist, try the <a href="{{ .Site.BaseURL }}">homepage</a>
 				</h1>
-				{{ else }}
+				{{ end }}
+				{{ if eq .Page.Kind "home" }}
 				<span id="strings">
 					<span id="previous-visitor">Welcome back</span>
 					<span id="first-time-visitor">Good
@@ -21,6 +22,11 @@
 						{{ .Content }}
 					</div>
 				</div>
+				{{ else }}
+				<span id="strings">
+					<span>{{ if eq .Page.Kind "taxonomy" }}Projects using {{ .Title }}{{ else }}{{ .Title }}{{ end }}</span>
+				</span>
+				<span class="h1 typed"></span>
 				{{ end }}
 			</div>
 		</div>

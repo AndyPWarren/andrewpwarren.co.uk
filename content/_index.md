@@ -1,5 +1,5 @@
 ---
-tags: ["HTML", "CSS", "LESS/SASS", "JavaScript", "TypeScript", "ES6", "Angular", "NodeJS & NPM", "Java", "Git", "Gitlab", "Grunt", "Docker", "AWS", "Python", "Django"]
+
 ---
 I love making things, crafting solutions across the whole tech stack. I relish the chance to solve a complex problem.
 

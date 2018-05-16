@@ -34,3 +34,12 @@ a {
 	  color: $white;
 	}
 }
+
+.tag-cta {
+	display: block;
+	padding: 1em;
+	&:hover {
+		color: $primary;
+		background-color: $white
+	}
+}

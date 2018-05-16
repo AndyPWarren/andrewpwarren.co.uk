@@ -6,10 +6,10 @@
           <a class="navbar-brand text-uppercase" href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a>
           <ul class="navbar-nav">
             <li class="nav-item">
-              {{ if eq .Page.Kind "home" }}
-              <a class="nav-link" href="#projects">Projects</a>
-              {{ else }}
+              {{ if eq .Page.Kind "404" }}
               <a class="nav-link" href="{{ .Site.BaseURL }}/#projects">Projects</a>
+              {{ else }}
+              <a class="nav-link" href="#projects">Projects</a>
               {{ end }}
             </li>
           </ul>
