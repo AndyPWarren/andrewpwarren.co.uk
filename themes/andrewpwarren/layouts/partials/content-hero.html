@@ -1,0 +1,24 @@
+<span id="strings">
+	<span>{{ .Title }}</span>
+</span>
+<span class="h1 typed"></span>
+<div class="reveal">
+	<h3>{{ .Description }}</h3>
+	{{ with .Params.link }}
+	<a class="cta-primary" href="{{ . }}" target="_blank">
+		<strong>Check it out</strong>
+	</a>
+	{{ end }} {{ with .Params.code }} {{ if eq (len .) 1}} {{ $first := index . 0 }}
+	<strong>
+		<a class="cta-primary" href="{{ $first.link  }}">Check out the code on
+			<i class="icons icon-github"></i>
+		</a>
+	</strong>
+	{{ else }}
+	<strong>Check out the code on
+		<i class="icons icon-github"></i>
+	</strong>
+	<br> {{ range . }}
+	<a class="cta-primary" href="{{ .link }}" target="_blank"><strong>{{ .type }}</strong></a>
+	<br> {{ end }} {{ end }} {{ end }} 
+</div>

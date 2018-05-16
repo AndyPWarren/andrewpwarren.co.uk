@@ -8,8 +8,8 @@
       <p>{{ dateFormat "Jan 2006" .Params.start }}{{ if .Params.end }} - {{ dateFormat "Jan 2006" .Params.end }}{{ end }}</p>
       {{ end }}
       <p>{{ .Description }}</p>
-      <a href="{{ .URL }}" class="cta-primary">
-        <strong>Read more</strong>
+      <a href="{{ .URL }}" class="cta-secondary">
+        <i class="fas fa-arrow-right"></i> <strong>Read more</strong>
       </a>
     </div>
   </div>

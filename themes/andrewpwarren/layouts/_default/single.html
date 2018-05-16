@@ -1,39 +1,33 @@
-{{ define "main" }} 
-{{ partial "single-nav.html" . }}
+{{ define "main" }} {{ partial "single-nav.html" . }}
 <div class="project-page">
 	<div class="container">
 		<section class="row align-items-center hero">
+			{{ if .Params.image }}
 			<div class="col-md-5 offset-md-1">
-				<span id="strings">
-					<span>{{ .Title }}</span>
-				</span>
-				<span class="h1 typed"></span>
-				<div class="reveal">
-					<h3>{{ .Description }}</h3>
-					{{ if .Params.link }}
-					<a class="cta-primary" href="{{ .Params.link }}" target="_blank">
-						<strong>Check it out</strong>
-					</a>
-					{{ end }}
-				</div>
+				{{ partial "content-hero.html" . }}
 			</div>
 			<div class="col-md-5">
-				{{ if .Params.image }}
-				<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}"> {{ end }}
+				<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}">
 			</div>
+			{{ else }}
+			<div class="col-md-10 offset-md-1">
+				{{ partial "content-hero.html" . }}
+			</div>
+			{{ end }}
 	</div>
 	</section>
 	<section class="info reveal">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-10 offset-md-1">
-					{{ .Content }} {{ with .Params.tags }}
+				<div class="col-md-10 offset-md-1 content">
+					{{ with .Params.tags }}
 					<ul class="list-inline">
 						{{ range .}}
 						<li class="badge badge-primary">{{ . }}</li>
 						{{ end }}
 					</ul>
 					{{ end }}
+					{{ .Content }} 
 				</div>
 			</div>
 		</div>

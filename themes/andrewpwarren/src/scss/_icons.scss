@@ -37,9 +37,6 @@
   /* Better Font Rendering =========== */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  &:hover {
-    color: $primary;
-  }
 }
 
 .icon-earth:before           {content: "\e900";}
