@@ -14,7 +14,23 @@ a {
 	}
 }
 
+.cta-secondary {
+	@include swiping-underline(0.125rem, 0.125rem, $white);
+	&:hover {
+		color: $white
+	}
+}
+
 .text a {
 	border-bottom: solid 0.125rem $white;
 	@include swiping-underline(0.125rem, 0.125rem, $primary);
+}
+
+.content a {
+	color: rgba($color: $white, $alpha: 0.7);
+	border-bottom: solid 0.0625rem rgba($color: $white, $alpha: 0.7);
+	@include swiping-underline(0.125rem, 0.125rem, $white);
+	&:hover {
+	  color: $white;
+	}
 }
