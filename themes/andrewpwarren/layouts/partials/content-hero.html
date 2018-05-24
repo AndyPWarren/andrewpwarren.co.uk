@@ -23,4 +23,11 @@
 	<a class="cta-primary" href="{{ .link }}" target="_blank"><strong>{{ .type }}</strong></a>
 	<br> {{ end }} {{ end }} {{ end }} 
 	</p>
+	{{ with .Params.tags }}
+	<ul class="list-inline">
+		{{ range .}}
+		<li class="badge badge-secondary no-padding"><a class="tag-cta" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower  }}">{{ . }}</a></li>
+		{{ end }}
+	</ul>
+	{{ end }}
 </div>
