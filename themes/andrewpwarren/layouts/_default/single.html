@@ -1,18 +1,36 @@
 {{ define "main" }} {{ partial "single-nav.html" . }}
 <div class="project-page">
 	<div class="container">
-		<section class="row align-items-center hero">
-			{{ if .Params.image }}
-			<div class="col-md-5 offset-md-1">
+		<section class="row hero">
+			<div class="col-md-11 offset-md-1">
 				{{ partial "content-hero.html" . }}
+				{{ with .Params.tags }}
+			<ul class="list-inline">
+				{{ range .}}
+				<li class="badge badge-secondary no-padding"><a class="tag-cta" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower  }}">{{ . }}</a></li>
+				{{ end }}
+			</ul>
 			</div>
-			<div class="col-md-5">
-				<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}">
+			{{ end }}
+			{{ if and .Params.image .Params.mobileImage}}
+			<div class="col-md-11 offset-md-1">
+				<div class="row align-items-center justify-content-center">
+					<div class="col-md-8">
+						<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}">
+					</div>
+					<div class="col-4 offset-md-0 col-md-3">
+						<div class="mobile-image-wrapper">
+							<img class="project-img reveal" src="{{ .Params.mobileImage }}" alt="{{ .Title }}">
+						</div>
+					</div>
+				</div>
 			</div>
 			{{ else }}
-			<div class="col-md-10 offset-md-1">
-				{{ partial "content-hero.html" . }}
+			{{ if .Params.image }}
+			<div class="col-md-11 offset-md-1">
+				<img class="project-img reveal" src="{{ .Params.image }}" alt="{{ .Title }}">
 			</div>
+			{{ end }}
 			{{ end }}
 	</div>
 	</section>
@@ -20,13 +38,6 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-10 offset-md-1">
-					{{ with .Params.tags }}
-					<ul class="list-inline">
-						{{ range .}}
-						<li class="badge badge-primary no-padding"><a class="tag-cta" href="{{ $.Site.BaseURL }}tags/{{ . | urlize | lower  }}">{{ . }}</a></li>
-						{{ end }}
-					</ul>
-					{{ end }}
 					<article class="content">
 						{{ .Content }}
 					</article>

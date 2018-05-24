@@ -9,6 +9,7 @@
 		<strong>Check it out</strong>
 	</a>
 	{{ end }} {{ with .Params.code }} {{ if eq (len .) 1}} {{ $first := index . 0 }}
+	<p>
 	<strong>
 		<a class="cta-primary" href="{{ $first.link  }}">Check out the code on
 			<i class="icons icon-github"></i>
@@ -21,4 +22,5 @@
 	<br> {{ range . }}
 	<a class="cta-primary" href="{{ .link }}" target="_blank"><strong>{{ .type }}</strong></a>
 	<br> {{ end }} {{ end }} {{ end }} 
+	</p>
 </div>

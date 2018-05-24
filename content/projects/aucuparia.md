@@ -7,7 +7,7 @@ end: 2016-11-01
 link: http://www.aucuparia.co.uk
 image: /img/projects/aucuparia.png
 tags: ["HTML", "CSS", "LESS", "AngularJS", "Python", "Django", "Git", "GitLab", "AWS ECS"]
-weight: 1
+weight: 2
 ---
 I worked with the team at SpectraKey to create a portfolio website for Aucuparia Consultancy. The customer needed to be able to iterate over the content quickly, adding projects and experiences on the fly. 
 
