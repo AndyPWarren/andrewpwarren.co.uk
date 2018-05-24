@@ -4,7 +4,6 @@ description: "Back-end service for processing Will interview data that allowed u
 company: "Evident Legal"
 start: 2016-09-01
 end: 2017-01-01
-image: "/img/projects/distiller.png"
 tags: ["Java", "ElasticSearch", "MySQL"]
 weight: 3
 ---
