@@ -45,8 +45,13 @@ This is the final circuit. The track slots in via the black box, positive is the
 
 ![slot car final circuit](/img/projects/slot-car/final-circuit.jpg "Slot car final circuit")
 
+## Demo
+***
+Here is the finished system in action. The screen in the top corner is controlling the inside lane and the screen in the bottom corner is controlling the outside lane. The user holds down the 'Press and go' button which triggers accelerometer data to be streamed to the cars. This is indicated by the tachometer bar changing from red to green. 
+
+{{< video width="100%" source="/img/projects/slot-car/slot-car-demo.mov" type="mov" >}}
+
 ## End Result
 ***
 I found controlling the cars using the accelerometer in an accelerator-pedal motion to be a natural and effective experience. By bringing this rather one-dimensional game into the digital domain it has expanded its potential with the possibility of future features like lap timing and counting, race control and power-ups which will ultimately create a more engaging game.
 
-<!-- Video demo -->
