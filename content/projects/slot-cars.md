@@ -2,7 +2,7 @@
 title:  "Slot Cars"
 description: "A system for controlling slot cars using the accelerometer in a mobile device"
 start: 2018-01-01
-image: "/img/projects/slot-car/hero-combined-no-screen.jpg"
+image: "/img/projects/slot-car/hero.jpg"
 tags: ["Go", "Angular", "RaspberryPi", "Electronics"]
 code: [
 	{
